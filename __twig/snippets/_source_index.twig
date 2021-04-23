@@ -1,0 +1,7 @@
+<div class="category-list">
+    {% for feed_id in snippet.options.feed_ids %}
+        <div class-"category-list-item">
+            <h3><a href={{"/category/#{feed_id}"}}>{{ category_data(feed_id).anchor }}</a></h3>
+        </div>
+    {% endfor %}
+</div>

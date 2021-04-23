@@ -1,0 +1,21 @@
+
+{% extends "base.twig" %}
+
+{% block meta_tags %}
+<meta name="robots" content="noindex, noimageindex" />
+{% endblock %}
+
+{% block content %}
+
+        <div class="custom-container">
+            <div class="row border-bottom2">
+                <div class="col-md-8 col-sm-8 style-box1 tzcontent">
+                    {{ include("_category.twig")  }}
+                </div>
+                {{ include('_sidebar.twig') }}
+
+            </div>
+
+        </div>
+
+{% endblock %}

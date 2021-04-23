@@ -1,0 +1,11 @@
+<div class={{"item-small #{item_style}"}}>
+    <div class="tz-thumbnail">
+        <a href="{{article.href}}">
+            <img src="{{article.image_links.small_175}}" alt="{{article.title}}">
+        </a>
+    </div>
+    <div class="tz-infomation">
+        <h3 class="tz-post-title"><a href="{{article.href}}">{{article.title  |truncate(46)}}</a></h3>
+        <span class="meta"><a href="{{article.href}}"></a>{{article.formatted_date}}</span>
+    </div>
+</div>

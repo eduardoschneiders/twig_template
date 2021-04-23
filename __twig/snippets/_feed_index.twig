@@ -1,0 +1,11 @@
+{% set article_list = load_category() %}
+<div class="category-list">
+    {% for article in article_list %}
+        <div class-"category-list-item">
+            <h3><a href="{{article.href ?? article.slug}}">{{article.title}}</a></h3>
+            <p class="date">{{article.formatted_date}}</p>
+            <p class="excerpt">{{article.excerpt}}</p>
+        </div>
+    {% endfor %}
+
+</div>

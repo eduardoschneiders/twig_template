@@ -1,0 +1,13 @@
+<div class="col-md-3 col-sm-6">
+    <div class="widget widget_menu">
+        <h4 class="widget_title">{{ snippet.options.header_string }}</h4>
+        <ul>
+            <li>
+                <a href="/">{{ site_config.strings.ts_home_link}}</a>
+            </li>
+            {% for feed_id in snippet.options.feed_ids %}
+            <li><a href={{"/category/#{feed_id}"}}>{{ category_data(feed_id).anchor }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

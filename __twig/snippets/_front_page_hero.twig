@@ -1,0 +1,27 @@
+{% set feed_articles = content_for_snippet(snippet.options.feed_ids, snippet.options.post_limit, true) %}
+
+
+<div class="featured-post-wrap">
+    <div class="container">
+        <ul class="featured-post">
+            <li>
+                {% for i in 0..4 %}
+                {% set article = feed_articles[i] %}
+                <div class={{"tz-grid-post-#{i}"}}>
+                    <div class="tz-featured-thumb">
+                        <a  href="{{article.href}}">
+                            <img src="{{article.image_links.single}}">
+                        </a>
+                    </div>
+                    <div class="tz-featured-info">
+
+                        <h3><a  href="{{article.href}}">{{article.title  | truncate(40)}}</a></h3>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </li>
+
+        </ul>
+    </div>
+</div>

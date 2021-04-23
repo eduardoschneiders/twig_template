@@ -1,0 +1,3 @@
+{% for snippet in site_config.snippets.single %}
+{% include "#{snippet.filesystem_location}.twig" with {'snippet': snippet, 'article': article} %}
+{% endfor %}

@@ -1,0 +1,30 @@
+{% set category_id = request_args.q %}
+{% set p = pagination_data(category_id) %}
+        {{ condess_debug("Handling Feed Pagination" . category_id) }}
+
+<nav >
+<div class="text-center">
+    <ul class="pagination pagination-lg">
+    {% if p.pagination.previous_page %}
+    <li><a href="/category/{{category_id}}?page={{p.pagination.previous_page}}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+    {% else %}
+    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+    {% endif %}
+
+    {% for page_id in p.pagination.previous_pages %}
+    <li><a href="/category/{{category_id}}?page={{page_id}}">{{page_id}}</a></li>
+    {% endfor %}
+    <li class="active"><a href="#">{{p.current_page}}<span class="sr-only">(current)</span></a></li>
+    {% for page_id in p.pagination.next_pages %}
+    <li><a href="/category/{{category_id}}?page={{page_id}}">{{page_id}}</a></li>
+    {% endfor %}
+
+    {% if p.pagination.next_page %}
+    <li><a href="/category/{{category_id}}?page={{ p.pagination.next_page}}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    {% else %}
+    <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    {% endif %}
+
+    </ul>
+    </div>
+</nav>

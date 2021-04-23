@@ -1,0 +1,19 @@
+{% set content = content_for_snippet(snippet.options.feed_ids, snippet.options.post_limit) %}
+
+<div class="tz-element">
+    <div class="tz-title-filter full">
+        <h3 class="tz-title">
+            <span>{{ snippet.options.header_string }}</span>
+        </h3>
+    </div>
+    <div class="post-wrap-rating">
+        {% for article in content %}
+            <div class="item-rating item-small">
+                <div class="tz-infomation">
+                    <h3 class="tz-post-title"><a href="{{article.href ?? article.slug}}">{{article.title }}</a></h3>
+                    <p class="date">{{article.formatted_date}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

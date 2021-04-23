@@ -1,0 +1,18 @@
+{% set content = content_for_snippet(snippet.options.feed_ids, snippet.options.post_limit) %}
+
+<div class="col-md-3 col-sm-6">
+    <div class="widget recent_post">
+        <h4 class="widget_title">{{ snippet.options.header_string }}</h4>
+        <ul>
+            {% for article in content %}
+            <li>
+                <h5><a href="{{article.href ?? article.slug}}">{{article.title}}</a></h5>
+                <span class="recent-meta">
+                    <i class="ui-date"></i>{{article.formatted_date}}
+                </span>
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>

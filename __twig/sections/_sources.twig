@@ -1,0 +1,3 @@
+{% for snippet in site_config.snippets.source_index %}
+  {% include "#{snippet.filesystem_location}.twig" with {'snippet': snippet} %}
+{% endfor %}

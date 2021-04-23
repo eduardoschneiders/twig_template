@@ -1,0 +1,24 @@
+{% set article = load_article() %}
+
+{% block meta_tags %}
+    {% if not article.indexable %}
+    <meta name="robots" content="noindex, noimageindex" />
+    {% endif %}
+    {% if article.canonical %}
+    <link rel='canonical' href="https://{{site_config.config.site_url}}{{article.canonical}}" />
+    {% endif %}
+{% endblock %}
+
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="custom-container">
+    <div class="row border-bottom2">
+        <div class="col-md-8 col-sm-8 style-box1 tzcontent">
+            {{ include("_single.twig")  }}
+        </div>
+        {{ include('_sidebar.twig') }}
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>{{ get_page_title() }}</title>
+
+    <link rel="icon" href="{{site_config.images.favicon ?? site_config.images.logo ?? '/favico.ico' }}">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    {{ link_stylesheet("/fonts/font-awesome/css/font-awesome.min.css") }}
+    {{ link_stylesheet("/css/bootstrap.min.css") }}
+    {{ link_stylesheet("/css/owl.carousel.css") }}
+    {{ link_stylesheet("/css/owl.theme.css") }}
+    {{ link_stylesheet("/css/custom.css") }}
+
+    {% block doc_header %}
+    {% endblock %}
+    {% block meta_tags %}
+    {% endblock %}
+    {{ site_config.page_head_content | raw }}
+
+</head>
+
+<body>
+    {{ site_config.page_body_top_content | raw }}
+    <div class="site">
+    {% embed 'sections/_header.twig' %}
+    {% endembed %}
+
+    {% block content %}
+    Undefined content
+    {% endblock %}
+
+    {% embed 'sections/_footer.twig' %}
+    {% endembed %}
+
+
+    </div>
+    <!--End class site-->
+
+    {{ site_config.page_body_bottom_content | raw }}
+
+    {{ link_script("/js/jquery.min.js") }}
+    {{ link_script("/js/bootstrap.min.js") }}
+    {{ link_script("/js/theia-sticky-sidebar.js") }}
+    {{ link_script("/js/off-canvas.js") }}
+    {{ link_script("/js/owl.carousel.js") }}
+    {{ link_script("/js/custom.js") }}
+</body>
+</html>

@@ -1,0 +1,10 @@
+<header class="tz-header">
+    <div class="tz-header-content">
+
+        {% for snippet in site_config.snippets.header %}
+            {% include "#{snippet.filesystem_location}.twig" with {'snippet': snippet} %}
+        {% endfor %}
+    </div>
+        {{ include('_navbar.twig') }}
+
+</header>

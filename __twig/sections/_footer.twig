@@ -1,0 +1,20 @@
+        <footer class="tz-footer">
+            <div class="container footer-content">
+                <div class="row">
+                {% for snippet in site_config.snippets.footer %}
+                    {% include "#{snippet.filesystem_location}.twig" with {'snippet': snippet} %}
+                {% endfor %}
+                </div>
+            </div>
+
+            <div class="tz-copyright">
+                <div class="container">
+                    <p class="pull-left copyright-content">&copy; 2020 {{ site_config.config.site_name }}, All rights reserved.</p>
+                    <ul class="pull-right footer-social">
+                        <li>
+                            <p>{{ include(template_from_string(site_config.strings.ts_footer_contact)) }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>

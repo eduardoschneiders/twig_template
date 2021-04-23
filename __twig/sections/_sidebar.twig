@@ -1,0 +1,6 @@
+
+<div class="col-md-4 col-sm-4 remove-padding tzsidebar">
+  {% for snippet in site_config.snippets.sidebar %}
+  {% include "#{snippet.filesystem_location}.twig" with {'snippet': snippet} %}
+  {% endfor %}
+</div>

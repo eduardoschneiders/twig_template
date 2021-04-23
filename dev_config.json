@@ -1,0 +1,223 @@
+{
+  "config": {
+    "site_base": "/var/condess_fe/sites/5",
+    "staging": false,
+    "access_key": "",
+    "site_id": 5,
+    "site_name": "Template 1 Development Site",
+    "site_url": "template_1.condessdev.com",
+    "site_domain": "template_1.condessdev.com",
+    "contact_email": "test@foo.com",
+    "logo_url": "https://via.placeholder.com/125.png",
+    "logo_type": "png",
+    "show_ad_blocks": "placeholder",
+    "full_id": "01456464aecbc62e",
+    "partial_id": "01456464ae"
+  },
+  "images": {},
+  "location": {},
+  "nearby_sites": [],
+  "sitemaps": [],
+  "feeds": {},
+  "strings": {
+    "ts_home_link": "Home",
+    "ts_pr_link": "Additional News",
+    "ts_footer_contact": "Questions?  Contact us at {{site_config.contact_email}}",
+    "ts_sidebar_title": "Featured Stories",
+    "ts_quick_links": "Quick Links",
+    "ts_popular_posts": "Popular Posts"
+  },
+  "template": {},
+  "snippets": {
+    "footer": [
+      {
+        "display_index": 1,
+        "filesystem_location": "_footer_linkbox",
+        "options": {
+          "header_string": "Quick Links",
+          "feed_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "home_anchor": null
+        }
+      },
+      {
+        "display_index": 2,
+        "filesystem_location": "_footer_ad_raw",
+        "options": {
+          "header_string": null,
+          "content": ""
+        }
+      },
+      {
+        "display_index": 3,
+        "filesystem_location": "_footer_content",
+        "options": {
+          "header_string": "Featured Posts",
+          "feed_ids": [
+            1
+          ],
+          "post_limit": "4"
+        }
+      }
+    ],
+    "header": [
+      {
+        "display_index": 1,
+        "filesystem_location": "_header_logo",
+        "options": {}
+      },
+      {
+        "display_index": 2,
+        "filesystem_location": "_header_adblock_raw",
+        "options": {
+          "header_string": null,
+          "content": ""
+        }
+      }
+    ],
+    "category": [
+      {
+        "display_index": 1,
+        "filesystem_location": "_feed_index",
+        "options": {}
+      }
+    ],
+    "sidebar": [
+      {
+        "display_index": 1,
+        "filesystem_location": "_stock_widget",
+        "options": {
+          "city": "ARL",
+          "city_full_name": "Arlington",
+          "city_name": "Arlington"
+        }
+      },
+      {
+        "display_index": 2,
+        "filesystem_location": "_weather_widget",
+        "options": {
+          "city": "ARL",
+          "city_full_name": "Arlington",
+          "city_name": "Arlington"
+        }
+      },
+      {
+        "display_index": 3,
+        "filesystem_location": "_sidebar_content",
+        "options": {
+          "header_string": "Sidebar Content",
+          "feed_ids": [
+            1
+          ],
+          "post_limit": "30"
+        }
+      }
+    ],
+    "single": [
+      {
+        "display_index": 1,
+        "filesystem_location": "_article",
+        "options": {}
+      }
+    ],
+    "front_page": [
+      {
+        "display_index": 1,
+        "filesystem_location": "_front_panel_one",
+        "options": {
+          "header_string": "Front Panel One",
+          "feed_id": "2",
+          "post_limit": "5"
+        }
+      },
+      {
+        "display_index": 2,
+        "filesystem_location": "_front_panel_two",
+        "options": {
+          "header_string": "Front Panel Two",
+          "feed_id": "3",
+          "post_limit": "8"
+        }
+      },
+      {
+        "display_index": 2,
+        "filesystem_location": "_front_panel_three",
+        "options": {
+          "header_string": "Front Panel Three",
+          "feed_id": "3",
+          "post_limit": "8"
+        }
+      },
+      {
+        "display_index": 4,
+        "filesystem_location": "_front_panel_one",
+        "options": {
+          "header_string": "Front Panel One",
+          "feed_id": "5",
+          "post_limit": "5"
+        }
+      }
+    ],
+    "source_index": [
+      {
+        "display_index": 1,
+        "filesystem_location": "_source_index",
+        "options": {
+          "header_string": null,
+          "feed_ids": [
+            1,
+            2,
+            3,
+            4,
+            7
+          ],
+          "home_anchor": null
+        }
+      }
+    ],
+    "article": [
+      {
+        "display_index": 1,
+        "filesystem_location": "_article_headline",
+        "options": {}
+      },
+      {
+        "display_index": 2,
+        "filesystem_location": "_article_image",
+        "options": {}
+      },
+      {
+        "display_index": 3,
+        "filesystem_location": "_article_body",
+        "options": {}
+      }
+    ],
+    "navbar": [
+      {
+        "display_index": 1,
+        "filesystem_location": "_header_linkbar",
+        "options": {
+          "header_string": null,
+          "feed_ids": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "home_anchor": "Home"
+        }
+      }
+    ]
+  },
+  "assets": [],
+  "page_body_top_content": "",
+  "page_body_bottom_content": "",
+  "page_head_content": ""
+}

@@ -1,0 +1,203 @@
+{
+  "available_options": {
+    "header_string": {
+      "type": "text",
+      "default": ""
+    },
+    "content": {
+      "type": "text",
+      "default": ""
+    },
+    "city": {
+      "type": "text",
+      "default": ""
+    },
+    "city_full_name": {
+      "type": "text",
+      "default": ""
+    },
+    "city_name": {
+      "type": "text",
+      "default": ""
+    },
+    "template": {
+      "type": "text",
+      "default": ""
+    },
+    "feed_id": {
+      "type": "single_feed",
+      "default": ""
+    },
+    "feed_ids": {
+      "type": "feed_list",
+      "default": [
+
+      ]
+    },
+    "feed_ids_left": {
+      "type": "feed_list",
+      "default": [
+
+      ]
+    },
+    "feed_ids_right": {
+      "type": "feed_list",
+      "default": [
+
+      ]
+    },
+    "home_anchor": {
+      "type": "text",
+      "default": ""
+    },
+    "post_limit": {
+      "type": "text",
+      "default": "8"
+    },
+    "post_limit_left": {
+      "type": "text",
+      "default": "8"
+    },
+    "post_limit_right": {
+      "type": "text",
+      "default": "8"
+    },
+    "randomize": {
+      "type": "boolean",
+      "default": false
+    },
+    "mobile_only": {
+      "type": "boolean",
+      "default": false
+    },
+    "hide_on_mobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "truncate_length": {
+      "type": "text",
+      "default": ""
+    }
+  },
+  "presets": {
+    "single_block": {
+      "header_string": null,
+      "feed_id": [
+
+      ],
+      "post_limit": 8
+    },
+    "single_block_multi_feed": {
+      "header_string": null,
+      "feed_ids": [
+
+      ],
+      "post_limit": 8
+    },
+    "dual_block": {
+      "header_string": null,
+      "feed_id_left": [
+
+      ],
+      "feed_id_right": [
+
+      ],
+      "post_limit_left": 8,
+      "post_limit_right": 8
+    },
+    "template": {
+      "header_string": null,
+      "template": null
+    },
+    "custom": {
+      "header_string": null,
+      "content": null
+    },
+    "link_collection": {
+      "header_string": null,
+      "feed_ids": [
+
+      ],
+      "home_anchor": null
+    },
+    "prconnect_widget": {
+      "city": null,
+      "city_full_name": null,
+      "city_name": null
+    },
+    "none": {
+    }
+  },
+  "components": {
+    "article": {
+      "preset": "none",
+      "options": {}
+    },
+    "custom_component": {
+      "preset": "custom",
+      "options": {}
+    },
+    "footer_ad_raw": {
+      "preset": "custom",
+      "options": {}
+    },
+    "footer_content": {
+      "preset": "single_block_multi_feed",
+      "options": {}
+    },
+    "footer_linkbox": {
+      "preset": "link_collection",
+      "options": {}
+    },
+    "front_page_hero": {
+      "preset": "single_block_multi_feed",
+      "options": {}
+    },
+    "front_panel_one": {
+      "preset": "single_block",
+      "options": {
+        "post_limit": 12
+      }
+    },
+    "front_panel_three": {
+      "preset": "single_block",
+      "options": {}
+    },
+    "front_panel_two": {
+      "preset": "single_block",
+      "options": {}
+    },
+    "header_adblock_raw": {
+      "preset": "custom",
+      "options": {}
+    },
+    "header_linkbar": {
+      "preset": "link_collection",
+      "options": {}
+    },
+    "inline_ad_raw": {
+      "preset": "custom",
+      "options": {}
+    },
+    "sidebar_adblock_raw": {
+      "preset": "custom",
+      "options": {}
+    },
+    "sidebar_content": {
+      "preset": "single_block_multi_feed",
+      "options": {}
+    },
+    "source_index": {
+      "preset": "link_collection",
+      "options": {}
+    },
+    "stock_widget": {
+      "preset": "prconnect_widget",
+      "options": {       }
+    },
+    "weather_widget": {
+      "preset": "prconnect_widget",
+      "options": {}
+    }
+  }
+}

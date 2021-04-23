@@ -1,0 +1,12 @@
+<div class="tz-header-menu">
+    <div class="container">
+        <nav class="nav-menu pull-left">
+            <ul class="tz-main-menu nav-collapse">
+                <li><a href="/">{{ snippet.options.home_anchor }}</a></li>
+                {% for feed_id in snippet.options.feed_ids %}
+                <li class=""><a href={{"/category/#{feed_id}"}}>{{ category_data(feed_id).anchor }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</div>
